@@ -9,6 +9,9 @@ AProp::AProp()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	// Create a static mesh component and set it as the root component
+	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
+	RootComponent = MeshComp;
 }
 
 // Called when the game starts or when spawned
